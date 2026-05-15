@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { categories } from "@/data/categories";
 import { products } from "@/data/products";
-import { ProductCard } from "@/components/ProductCard";
 import { CategoryCard } from "@/components/CategoryCard";
+import { ProductsFilter } from "@/components/ProductsFilter";
 
 export const metadata: Metadata = {
   title: "Products",
@@ -46,22 +46,18 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* All Products */}
+      {/* All Products — with live filters */}
       <section className="section-padding bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+          <div className="mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-1">
               All Products
             </h2>
             <p className="text-sm text-muted font-sans">
-              {products.length} products
+              Search and filter by brand, floor type, or wood species
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          <ProductsFilter products={products} />
         </div>
       </section>
     </>

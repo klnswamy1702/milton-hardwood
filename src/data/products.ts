@@ -4,6 +4,7 @@ export interface ProductSpec {
   length?: string;
   finish?: string;
   color?: string;
+  woodType?: string;
   installationType?: string;
   warranty?: string;
   material?: string;
@@ -15,6 +16,7 @@ export interface Product {
   name: string;
   slug: string;
   category: string;
+  brand?: string;
   collection?: string;
   images: string[];
   description: string;
@@ -35,6 +37,7 @@ export const products: Product[] = [
     name: "European Oak Natural",
     slug: "european-oak-natural",
     category: "engineered-hardwood",
+    brand: "Boen",
     collection: "Heritage Collection",
     images: ["/images/products/engineered-hardwood.png"],
     description:
@@ -47,6 +50,7 @@ export const products: Product[] = [
       length: 'Random lengths up to 86"',
       finish: "Wire-brushed, UV Lacquer",
       color: "Natural Oak",
+      woodType: "Oak",
       installationType: "Glue-down, Float, Nail-down",
       warranty: "Lifetime structural, 25-year finish",
     },
@@ -61,6 +65,7 @@ export const products: Product[] = [
     name: "French Oak Smokehouse",
     slug: "french-oak-smokehouse",
     category: "engineered-hardwood",
+    brand: "Mirage",
     collection: "Artisan Collection",
     images: ["/images/products/solid-hardwood.png"],
     description:
@@ -73,6 +78,7 @@ export const products: Product[] = [
       length: 'Random lengths up to 72"',
       finish: "Hand-scraped, Oil finish",
       color: "Smoky Brown",
+      woodType: "Oak",
       installationType: "Glue-down, Nail-down",
       warranty: "Lifetime structural, 20-year finish",
     },
@@ -87,6 +93,7 @@ export const products: Product[] = [
     name: "White Oak Herringbone",
     slug: "white-oak-herringbone",
     category: "engineered-hardwood",
+    brand: "Riva",
     collection: "Designer Collection",
     images: ["/images/products/engineered-hardwood.png"],
     description:
@@ -97,6 +104,7 @@ export const products: Product[] = [
       length: '24" (610mm)',
       finish: "Smooth, UV Lacquer",
       color: "Light Natural",
+      woodType: "Oak",
       installationType: "Glue-down",
       warranty: "Lifetime structural, 25-year finish",
     },
@@ -111,6 +119,7 @@ export const products: Product[] = [
     name: "Maple Honey Blonde",
     slug: "maple-honey-blonde",
     category: "engineered-hardwood",
+    brand: "Biyork",
     collection: "Classic Collection",
     images: ["/images/products/laminate.png"],
     description:
@@ -121,6 +130,7 @@ export const products: Product[] = [
       length: 'Random lengths up to 48"',
       finish: "Smooth, Satin Lacquer",
       color: "Honey Blonde",
+      woodType: "Maple",
       installationType: "Float, Glue-down",
       warranty: "30-year structural, 20-year finish",
     },
@@ -137,6 +147,7 @@ export const products: Product[] = [
     name: "Red Oak Select",
     slug: "red-oak-select",
     category: "solid-hardwood",
+    brand: "Vintage",
     collection: "Signature Collection",
     images: ["/images/products/solid-hardwood.png"],
     description:
@@ -148,6 +159,7 @@ export const products: Product[] = [
       width: '3-1/4" (83mm)',
       finish: "Smooth, Satin Polyurethane",
       color: "Natural Red Oak",
+      woodType: "Oak",
       installationType: "Nail-down, Staple",
       warranty: "Lifetime structural",
     },
@@ -162,6 +174,7 @@ export const products: Product[] = [
     name: "Walnut Premium Wide Plank",
     slug: "walnut-premium-wide-plank",
     category: "solid-hardwood",
+    brand: "Fuzion",
     collection: "Premium Collection",
     images: ["/images/products/solid-hardwood.png"],
     description:
@@ -171,6 +184,7 @@ export const products: Product[] = [
       width: '5" (127mm)',
       finish: "Smooth, Semi-gloss Polyurethane",
       color: "Dark Chocolate",
+      woodType: "Walnut",
       installationType: "Nail-down",
       warranty: "Lifetime structural",
     },
@@ -185,6 +199,7 @@ export const products: Product[] = [
     name: "Hickory Rustic",
     slug: "hickory-rustic",
     category: "solid-hardwood",
+    brand: "Mirage",
     collection: "Rustic Collection",
     images: ["/images/products/engineered-hardwood.png"],
     description:
@@ -194,6 +209,7 @@ export const products: Product[] = [
       width: '5" (127mm)',
       finish: "Hand-scraped, Matte Polyurethane",
       color: "Multi-tonal Natural",
+      woodType: "Hickory",
       installationType: "Nail-down",
       warranty: "Lifetime structural",
     },
@@ -210,6 +226,7 @@ export const products: Product[] = [
     name: "Waterproof Oak LVP",
     slug: "waterproof-oak-lvp",
     category: "vinyl",
+    brand: "Amorim Wise",
     collection: "AquaGuard Collection",
     images: ["/images/products/vinyl.png"],
     description:
@@ -237,6 +254,7 @@ export const products: Product[] = [
     name: "Stone Gray LVT",
     slug: "stone-gray-lvt",
     category: "vinyl",
+    brand: "Fuzion",
     collection: "Modern Collection",
     images: ["/images/products/vinyl.png"],
     description:
@@ -263,6 +281,7 @@ export const products: Product[] = [
     name: "Nordic Maple Laminate",
     slug: "nordic-maple-laminate",
     category: "laminate",
+    brand: "Biyork",
     collection: "Scandinavia Collection",
     images: ["/images/products/laminate.png"],
     description:
@@ -273,6 +292,7 @@ export const products: Product[] = [
       length: '54" (1380mm)',
       finish: "Embossed wood grain",
       color: "Light Maple",
+      woodType: "Maple",
       installationType: "Click-lock floating",
       warranty: "25-year residential",
     },
@@ -287,6 +307,7 @@ export const products: Product[] = [
     name: "Midnight Walnut Laminate",
     slug: "midnight-walnut-laminate",
     category: "laminate",
+    brand: "Riva",
     collection: "Urban Collection",
     images: ["/images/products/solid-hardwood.png"],
     description:
@@ -297,6 +318,7 @@ export const products: Product[] = [
       length: '48" (1220mm)',
       finish: "Deep embossed",
       color: "Dark Walnut",
+      woodType: "Walnut",
       installationType: "Click-lock floating",
       warranty: "20-year residential",
     },
